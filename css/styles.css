@@ -1,4 +1,30 @@
 /* ============== COMMON STYLES ============== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
 .list {
   list-style-type: none;
 }
@@ -7,12 +33,9 @@
   text-decoration: none;
 }
 
-button {
-  cursor: pointer;
-}
-
 body {
   font-family: 'Montserrat', sans-serif;
+  background-color: #fafafa;
 }
 
 .accent-color {
@@ -29,6 +52,13 @@ body {
   color: #111111;
 }
 
+.container {
+  width: 1168px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
 /* ============== /COMMON STYLES ============== */
 
 /* ============== HEADER STYLES ============== */
@@ -113,6 +143,18 @@ body {
 /* ============== /BENEFITS STYLES ============== */
 
 /* ============== INGREDIENTS STYLES ============== */
+.ingredients-list-item:nth-child(4n + 1) {
+  background-color: #fd9222;
+}
+
+.ingredients-list-item:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.ingredients-list-item:nth-child(4n + 3) {
+  background-color: #1e1823;
+}
+
 .ingredients-description {
   font-size: 14px;
   font-style: normal;
