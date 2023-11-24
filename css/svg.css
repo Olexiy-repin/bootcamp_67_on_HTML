@@ -37,10 +37,40 @@ a {
 }
 
 .social-list-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: #ffffff;
+  fill: teal;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
   fill: tomato;
+}
+
+.clock-icon {
+  --clock-color: tomato;
+  --line-color: teal;
+}
+
+.clock-icon:hover {
+  --clock-color: teal;
+  --line-color: tomato;
+}
+
+.contact-tel-link {
+  color: #ffffff;
+}
+
+.contact-tel-link:hover,
+.contact-tel-link:focus {
+  color: #111111;
+}
+
+.contact-tel-icon {
+  fill: currentColor;
 }
