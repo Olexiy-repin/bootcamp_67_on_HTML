@@ -188,6 +188,7 @@ body {
   border: none;
   margin-right: 14px;
   padding: 14px 40px;
+  transition: background-color 250ms linear, color 250ms linear;
 }
 
 .buy-now-btn:hover,
@@ -206,24 +207,48 @@ body {
   padding: 14px 40px;
   margin-right: auto;
   color: #ffffff;
+  transition: border-color 250ms linear, color 250ms linear;
 }
 
 .how-made-link:hover,
 .how-made-link:focus {
   color: #fd9222;
+  border-color: #fd9222;
 }
 
 .scroll-down-link {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: #ffffff;
+  transition: color 250ms linear;
 }
 
 .scroll-down-link:hover,
 .scroll-down-link:focus {
   color: #fd9222;
+}
+
+.scroll-down-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  fill: #fd9222;
+  transition: background-color 250ms linear, fill 250ms linear;
+}
+
+.scroll-down-link:hover .scroll-down-icon-wrapper,
+.scroll-down-link:focus .scroll-down-icon-wrapper {
+  background-color: #fd9222;
+  fill: #ffffff;
 }
 /* ============== /HERO STYLES ============== */
 
@@ -245,7 +270,30 @@ body {
 }
 
 .benefits-list-item {
+  position: relative;
   width: calc((100% - 2 * 88px) / 3);
+}
+
+.benefits-list-item:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  content: '';
+}
+
+.benefits-list-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 22px;
 }
 
 .benefits-list-title {
@@ -349,6 +397,46 @@ body {
   transform: translateY(0%);
 }
 
+.overlay-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 8px;
+}
+
+.overlay-tags-list {
+  display: flex;
+  column-gap: 6px;
+  margin-bottom: 14px;
+}
+
+.overlay-tags-list-item {
+  padding: 6px 16px;
+  border-radius: 35px;
+  background-color: #fafafa;
+  border: 1px solid #fd9222;
+  color: #111111;
+}
+
+.overlay-tags-list-item-main {
+  background-color: #fd9222;
+  color: #ffffff;
+}
+
+.overlay-tags-list-text {
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+.overlay-text {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #111111;
+}
+
 /* ============== /INGREDIENTS STYLES ============== */
 
 /* ============== HOW MADE STYLES ============== */
@@ -400,7 +488,7 @@ body {
 }
 
 .reviews-title {
-  margin-bottom: 50px;
+  margin-bottom: 90px;
 }
 
 .reviews-list {
@@ -410,6 +498,7 @@ body {
 }
 
 .reviews-list-item {
+  position: relative;
   width: calc((100% - 56px) / 3);
   padding-top: 56px;
   padding-right: 24px;
@@ -421,12 +510,20 @@ body {
   box-shadow: 0px 9.05px 100px 0px rgba(17, 17, 17, 0.03);
 }
 
+.reviews-list-avatar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .reviews-list-fullname {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.33;
   text-align: center;
   color: #111111;
+  margin-bottom: 20px;
 }
 
 .reviews-list-text {
@@ -450,6 +547,7 @@ body {
   border: 1px solid #fd9222;
   color: #111111;
   background-color: #ffffff;
+  transition: background-color 250ms linear, color 250ms linear;
 }
 
 .leave-review-btn:hover,
@@ -500,6 +598,7 @@ body {
   line-height: 1.29;
   letter-spacing: -0.02em;
   color: #ffffff;
+  transition: color 250ms linear;
 }
 
 .contact-list-link:hover,
