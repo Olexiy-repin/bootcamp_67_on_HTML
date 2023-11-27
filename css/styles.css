@@ -82,6 +82,12 @@ body {
 /* ============== /COMMON STYLES ============== */
 
 /* ============== HEADER STYLES ============== */
+.page-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .page-navigation {
   display: flex;
   justify-content: space-between;
@@ -90,11 +96,17 @@ body {
 }
 
 .logotype {
+  display: flex;
+  align-items: center;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: -0.03em;
   color: #111111;
+}
+
+.logotype-icon {
+  margin-left: 4px;
 }
 
 .menu {
@@ -111,12 +123,31 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   color: #111111;
+  transition: color 250ms linear;
 }
 
 .menu-link:hover,
 .menu-link:focus {
   color: #fd9222;
 }
+
+.social-list {
+  display: flex;
+  column-gap: 18px;
+}
+
+.social-list-link {
+  display: block;
+  line-height: 0;
+  stroke: #111111;
+  transition: stroke 250ms linear;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  stroke: #fd9222;
+}
+
 /* ============== /HEADER STYLES ============== */
 
 /* ============== HERO STYLES ============== */
@@ -127,6 +158,9 @@ body {
   padding: 381px 40px 40px 40px;
   border-radius: 30px;
   background-color: rgba(17, 17, 17, 0.6);
+  background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
+    url('../images/hero/bg.jpg');
+  background-size: cover;
 }
 
 .main-title {
@@ -252,9 +286,11 @@ body {
 }
 
 .ingredients-list-item {
+  position: relative;
   width: calc((100% - 3 * 19px) / 4);
   padding: 28px 32px;
   border-radius: 15px;
+  overflow: hidden;
 }
 
 .ingredients-list-item:nth-child(4n + 1) {
@@ -293,6 +329,26 @@ body {
   letter-spacing: -0.02em;
   text-transform: uppercase;
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  color: tomato;
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+}
+
+.ingredients-list-item:hover .overlay {
+  transform: translateY(0%);
+}
+
 /* ============== /INGREDIENTS STYLES ============== */
 
 /* ============== HOW MADE STYLES ============== */
