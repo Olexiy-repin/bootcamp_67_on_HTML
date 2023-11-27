@@ -18,9 +18,16 @@
   cursor: pointer;
   margin: 0 auto;
   background-color: #2980b9;
+
+  transition: background-color 1000ms linear, transform 500ms ease;
+  /* transition-property: all;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.34, 1.05, 1, 0.04);
+  transition-delay: 0ms; */
 }
 
 .btn:hover,
 .btn:focus {
   background-color: #e74c3c;
+  transform: rotate(360deg);
 }
