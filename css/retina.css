@@ -1,0 +1,57 @@
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+
+body {
+  height: 100vh;
+}
+
+/* 
+1x - 96dpi
+2x - 192dpi
+3x - 288dpi
+*/
+
+.banner {
+  min-height: 600px;
+  background-image: url('../images/retina/car.jpg');
+  background-position: center top;
+  background-size: 960px 576px;
+  background-repeat: no-repeat;
+}
+
+/* 
+2x +
+*/
+@media screen and (min-resolution: 192dpi),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 2dppx) {
+  .banner {
+    background-image: url('../images/retina/car@2x.jpg');
+  }
+}
+
+/* 
+3x
+*/
+/* @media screen and (min-resolution: 288dpi),
+  screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx) {
+  .banner {
+    background-image: url('../images/retina/car@3x.jpg');
+  }
+} */
+
+.team-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.section {
+  padding: 50px 0;
+}
