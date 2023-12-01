@@ -48,6 +48,21 @@
             </li>
           </ul>
         </nav>
+        <button
+          class="mobile-menu-open-btn js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="mobile-menu-open-btn-icon"
+            width="28"
+            height="28"
+            aria-label="open mobile menu icon"
+          >
+            <use href="./images/icons/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
         <ul class="social-list list">
           <li class="social-list-item">
             <a href="" class="social-list-link">
@@ -69,7 +84,7 @@
 
     <main>
       <!-- ============== HERO SECTION ============== -->
-      <section class="hero">
+      <!-- <section class="hero">
         <h1 class="main-title">
           Treat yourself or a loved one to our finest ingredients for a moment of pure delight!
         </h1>
@@ -85,9 +100,9 @@
             </div>
           </a>
         </div>
-      </section>
+      </section> -->
       <!-- ============== BENEFITS SECTION ============== -->
-      <section class="benefits section" id="benefits">
+      <!-- <section class="benefits section" id="benefits">
         <div class="container benefits-container">
           <h2 class="visually-hidden">Benefits of our chocolate</h2>
           <ul class="benefits-list list">
@@ -133,8 +148,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="ingredients section">
+      </section> -->
+      <!-- <section class="ingredients section">
         <div class="container">
           <h2 class="section-title ingredients-title">
             It all adds up to one exceptional
@@ -256,8 +271,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="how-made section" id="making-process">
+      </section> -->
+      <!-- <section class="how-made section" id="making-process">
         <div class="container">
           <h2 class="section-title how-made-title">
             How it’s <span class="accent-color">made</span>?
@@ -297,8 +312,8 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="reviews section" id="reviews">
+      </section> -->
+      <!-- <section class="reviews section" id="reviews">
         <div class="container">
           <h2 class="section-title reviews-title">
             <span class="accent-color">Chocolate</span> is loved
@@ -349,9 +364,9 @@
           </ul>
           <button class="leave-review-btn" type="button">Leave a review</button>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="page-footer section">
+    <!-- <footer class="page-footer section">
       <div class="container">
         <div class="page-footer-top-block">
           <h2 class="page-footer-title">
@@ -403,10 +418,10 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- BACKDROP -->
-    <div class="backdrop is-open">
+    <!-- <div class="backdrop is-open">
       <div class="modal">
         <button class="modal-close-btn" type="button">
           <svg class="modal-close-btn-icon" width="28" height="28" aria-label="modal close icon">
@@ -502,6 +517,57 @@
           <button class="review-form-submit-btn" type="submit">Send</button>
         </form>
       </div>
+    </div> -->
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu-container js-menu-container" id="mobile-menu">
+      <button class="mobile-menu-container-close-btn js-close-menu" type="button">
+        <svg
+          class="mobile-menu-container-close-btn-icon"
+          width="28"
+          height="28"
+          aria-label="mobile menu close icon"
+        >
+          <use href="./images/icons/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="mobile-menu-navigation">
+        <ul class="mobile-menu list">
+          <li class="mobile-menu-item">
+            <a href="" class="mobile-menu-link link">Home</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="" class="mobile-menu-link link">How it’s made?</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="" class="mobile-menu-link link">Chocolate is loved</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="social-list list">
+        <li class="social-list-item">
+          <a href="" class="social-list-link link">
+            <svg class="social-list-icon">
+              <use></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a href="" class="social-list-link link">
+            <svg class="social-list-icon">
+              <use></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
